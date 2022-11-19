@@ -6,7 +6,12 @@ print(response.read())
 import  requests
 #help(requests)
 response = requests.get('https://wikipedia.org/')
-print(response.content)
-print(f"Datatype - {type(response.content)}")
+print(response.text)
+print(f"Datatype - {type(response.text)}")
+
+response = requests.post('https://httpbin.org/post', data='Test', headers = {'h1': 'TITLE'})
+print(response.text)
+
+
 
 
